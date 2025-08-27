@@ -4,26 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KP Trendz Admin</title>
-<link rel="stylesheet" href="admin.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
-  <h1>KP Trendz Admin Panel</h1>
+    <h1>KP Trendz Admin</h1>
 </header>
 
-<section class="admin-container">
-  <h2>Add New Product</h2>
-  <form id="add-product-form">
-    <input type="text" id="product-name" placeholder="Product Name" required>
-    <input type="number" id="product-price" placeholder="Price" required>
-    <input type="text" id="product-category" placeholder="Category (tshirt/shirt)" required>
-    <input type="text" id="product-image1" placeholder="Image 1 URL" required>
-    <input type="text" id="product-image2" placeholder="Image 2 URL" required>
-    <button type="submit">Add Product</button>
-  </form>
+<section class="admin-panel">
+    <h2>Add Product</h2>
+    <input type="text" id="product-name" placeholder="Name">
+    <input type="number" id="product-price" placeholder="Price">
+    <input type="text" id="product-category" placeholder="Category">
+    <input type="text" id="product-images" placeholder="Images (comma-separated)">
+    <button id="add-product">Add</button>
+</section>
 
-  <h2>Existing Products</h2>
-  <div class="product-list"></div>
+<section class="admin-panel">
+    <h2>Existing Products</h2>
+    <ul id="product-list"></ul>
 </section>
 
 <script src="admin.js"></script>
