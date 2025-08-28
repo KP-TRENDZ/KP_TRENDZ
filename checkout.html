@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - KP Trendz</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+  <script>
+    (function(){emailjs.init("YOUR_USER_ID");})();
+  </script>
+</head>
+<body>
+  <header>
+    <h1>KP Trendz Checkout</h1>
+  </header>
+
+  <section class="checkout-section">
+    <h2>Your Cart</h2>
+    <ul class="checkout-cart-items"></ul>
+    <p class="checkout-total"></p>
+
+    <form id="checkout-form">
+      <h3>Customer Information</h3>
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="phone" placeholder="Phone" required>
+      <input type="text" name="street" placeholder="Street Address" required>
+      <input type="text" name="city" placeholder="City" required>
+      <input type="text" name="province" placeholder="Province/State" required>
+      <input type="text" name="postal" placeholder="Postal/ZIP Code" required>
+      <input type="text" name="country" placeholder="Country" required>
+
+      <h3>Payment Option</h3>
+      <select name="payment" required>
+        <option value="manual">Pay on Delivery</option>
+        <option value="stripe">Credit Card (Stripe)</option>
+      </select>
+
+      <button type="submit">Place Order</button>
+    </form>
+  </section>
+
+  <script src="checkout.js"></script>
+</body>
+</html>
